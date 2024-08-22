@@ -1,0 +1,29 @@
+version: '3'
+services:
+  service_1:
+    build: ./microservice/service_1
+    ports:
+      - "50001:50001"
+    networks:
+      - microservices-network
+
+  service_2:
+    build: ./microservice/service_2
+    ports:
+      - "50002:50002"
+    networks:
+      - microservices-network
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - service_1
+      - service_2
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge
