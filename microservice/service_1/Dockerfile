@@ -1,7 +1,7 @@
 # Dockerfile for service_1
 
-# 使用官方的 Node.js 18 版本作为基础镜像
-FROM node:18
+# 使用官方的 Node.js 版本作为基础镜像
+FROM node
 
 # 创建工作目录
 WORKDIR /usr/src/app

@@ -6,6 +6,12 @@ services:
       - "50001:3000"
     networks:
       - microservices-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:50001/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
 
   service_2:
     build: ./microservice/service_2
@@ -13,6 +19,12 @@ services:
       - "50002:3000"
     networks:
       - microservices-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:50002/health"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
 
   api-gateway:
     build: ./api-gateway
