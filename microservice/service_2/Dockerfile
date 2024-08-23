@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # 暴露服务端口（替换为实际的服务端口）
-EXPOSE 50002
+EXPOSE 3000
 
 # 运行服务
 CMD ["npm", "run", "start:prod"]

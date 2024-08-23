@@ -9,12 +9,12 @@ import { AppService } from './app.service';
       {
         name: 'SERVICE_1',
         transport: Transport.TCP,
-        options: { host: 'localhost', port: 50001 },
+        options: { host: 'service_1', port: 3000 },
       },
       {
         name: 'SERVICE_2',
         transport: Transport.TCP,
-        options: { host: 'localhost', port: 50002 },
+        options: { host: 'service_2', port: 3000 },
       },
     ]),
   ],

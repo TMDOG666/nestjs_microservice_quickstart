@@ -3,14 +3,14 @@ services:
   service_1:
     build: ./microservice/service_1
     ports:
-      - "50001:50001"
+      - "50001:3000"
     networks:
       - microservices-network
 
   service_2:
     build: ./microservice/service_2
     ports:
-      - "50002:50002"
+      - "50002:3000"
     networks:
       - microservices-network
 
