@@ -22,10 +22,10 @@ npm install
 npm run build
 
 # Return to the root directory
-cd ../
+cd ../../nestjs_microservice_quickstart
 
 # Execute Docker Compose
 echo "Starting Docker containers..."
-docker-compose up -d
+docker compose up -d
 
 echo "Deployment completed."
