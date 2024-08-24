@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start win": "start.bat",
-    "start linux": "chmod +x start.sh && start.sh"
+    "win": "start.bat",
+    "linux": "chmod +x start.sh && start.sh"
   },
   "keywords": [],
   "author": "",
